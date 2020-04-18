@@ -2,9 +2,19 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    string Hero = "Online Movie Store";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">@Hero</h1>
+    <p>
+        a
+        <a href="https://dotnet.microsoft.com/apps/aspnet" _target="_blank">
+            ASP.NET Demo
+        </a>
+        by
+        <a href="https://cliff-crerar.tech">
+            &nbsp;Cliff Crerar
+        </a>.
+    </p>
 </div>

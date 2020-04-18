@@ -28,6 +28,7 @@ namespace IntroToRazor
 
             services.AddDbContext<RazorPagesMovieContext>(options =>
                     options.UseSqlite(Configuration.GetConnectionString("RazorPagesMovieContext")));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
