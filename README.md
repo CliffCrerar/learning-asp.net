@@ -1,6 +1,6 @@
 # ASP.net for Examplle projects and resources
 
-[![ASP.net Logo](https://cdn-cloudflare.ga.s3.amazonaws.com/assets/ag-two-week-report/_asp-net.png)](https://dotnet.microsoft.com/apps/aspnet)
+[![ASP.net Logo](https://cdn-cloudflare.ga/assets/ag-two-week-report/_asp-net.png)](https://dotnet.microsoft.com/apps/aspnet)
 
 ## Topics:
 		* Page Models
