@@ -1,5 +1,5 @@
 ﻿@{
-    Brand NavbarBrand = new Brand("Razor Movies Demo", "/");
+    Brand NavbarBrand = new Brand("Razor Movies Demo", "/Index");
     List<Link> NavLinks = new List<Link> {
         new Link("Home", "/Index", "Home"),
         new Link("Movies", "/Movies/Index", "Movies"),
@@ -20,7 +20,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container justify-content-between">
+            <div class="container d-flex justify-content-between">
                 <a class="navbar-brand" asp-page="@NavbarBrand.Href">@NavbarBrand.Caption</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -32,12 +32,11 @@
                             foreach (Link link in NavLinks)
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="@link.Href">@link.Caption</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-page="@link.Href">@link.Caption</a>       
                                 </li>
                             }
                         }
-                        
-                    </ul>
+                    </ul> 
                 </div>
             </div>
         </nav>
