@@ -26,6 +26,7 @@ namespace IntroToRazor.Pages.Movies
         public SelectList Genres { get; set; }
         [BindProperty(SupportsGet = true)]
         public string MovieGenre { get; set; }
+        public string Rating { get; set; }
 
         public async Task OnGetAsync()
         {

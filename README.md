@@ -6,7 +6,6 @@
 		* Page Models
 		* Scaffolding - Pages and Database
 		* Working with EF Core
-		* Migrations
 		* Seeding daa
 		* Data Anotations
 		* Route and Route templates
@@ -15,6 +14,8 @@
 		* Tag Helpers
 		* Handling Concurrency
 		* Model Binding
+		* Adding Fields 
+		* Migrations
 	
 ### Tutorial Matter: 
 * [Create a Razor Pages web app with ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/model?view=aspnetcore-3.1&tabs=visual-studio-mac)
@@ -22,7 +23,8 @@
 * [MVC Music Store](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/mvc-music-store/)
 * [Create an ASP.NET Core web app in Azure](https://tutorials.visualstudio.com/aspnet-azure/create)
 
-### Subject Matter:
+### Subject Matter studied for context:
+* [What is ASP.net](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet)
 * [Intro to ASP.net](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-3.1&tabs=visual-studio)
 * [Intro to Razor Syntax (C#)](https://docs.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c#basic-syntax)
 * [Razor Syntax](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-3.1#razor-syntax)
@@ -30,7 +32,7 @@
 * [Dependancy Injection](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1)
 * [Data Anotations](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6)
 * [Live Reloading Server And Client Side ASP.NET Core Apps](https://weblog.west-wind.com/posts/2019/May/18/Live-Reloading-Server-Side-ASPNET-Core-Apps)
-### * [Create reusable UI using the Razor class library project in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/ui-class?view=aspnetcore-3.1&tabs=visual-studio)
+#### * [Create reusable UI using the Razor class library project in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/ui-class?view=aspnetcore-3.1&tabs=visual-studio)
 * [Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/working-with-forms?view=aspnetcore-3.1)
 * [Share Application Parts](https://docs.microsoft.com/en-us/aspnet/core/mvc/advanced/app-parts?view=aspnetcore-3.1)
 * [Application Model](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/application-model?view=aspnetcore-3.1)
@@ -43,9 +45,13 @@
 * [Model Binding](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-3.1)
 * [Add Search](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/search?view=aspnetcore-3.1)
 * [Add New Field](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/new-field?view=aspnetcore-3.1&tabs=visual-studio)
+* [Migrations](https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli)
 
 ### Cloud Matter:
 * [Create an ASP.core web app in azure](https://tutorials.visualstudio.com/aspnet-azure/create)
 
 ### Other References 
 * [.NET Tools and editors](https://dotnet.microsoft.com/platform/tools)
+* [ASP.net Devops](https://channel9.msdn.com/Tags/asp.net-devops)
+* [.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)
+* [EF 6](https://docs.microsoft.com/en-us/ef/ef6/)
