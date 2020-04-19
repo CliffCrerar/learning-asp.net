@@ -3,6 +3,8 @@
 
 @{
     // Layout = null;
+    ViewData["Title"] = "Movie Catalogue";
+    ViewData["Header"] = "Movie Catalogue";
 }
 
 <!DOCTYPE html>
@@ -10,19 +12,17 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>@ViewData["Title"]</title>
 </head>
 <body>
-    <p>
-        
-    </p>
+    <h1>@ViewData["Header"]</h1>
     <!-- SEARCH BOX -->
     <form>
         
         <div class="form-row">
 
             <div class="form-group col-md-5">
-                <select class="form-control" asp-for="MovieGenre" asp-items="Model.Genres" placeholder="Select Genre to filter">
+                <select id="genreFilter" class="form-control" asp-for="MovieGenre" asp-items="Model.Genres" placeholder="Select Genre to filter">
                     <option value="">All</option>
                 </select>
             </div>
@@ -98,5 +98,15 @@
             }
         </tbody>
     </table>
+    <script>
+        const genreFilter = document.getElementById('genreFilter');
+        const form = document.getElementsByTagName("form")[0];
+        
+        function changeFunction() {
+            form.submit()
+        }
+
+        genreFilter.addEventListener('change', changeFunction)
+    </script>
 </body>
 </html>

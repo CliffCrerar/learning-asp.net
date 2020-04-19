@@ -24,7 +24,7 @@ namespace IntroToRazor
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddRazorPages().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 
             services.AddDbContext<RazorPagesMovieContext>(options =>
                     options.UseSqlite(Configuration.GetConnectionString("RazorPagesMovieContext")));
@@ -54,6 +54,7 @@ namespace IntroToRazor
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapRazorPages();
             });
         }
