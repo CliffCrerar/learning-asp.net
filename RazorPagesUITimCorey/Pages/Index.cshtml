@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    ViewData["InputLabel"] = "Enter your name:";
+    ViewData["Message"] = "We'll never share your name with anyone else.";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome to @Model.City</h1>
+
+        <!--<form asp-action="">
+        <div class="form-group col-md-3 m-auto">
+            <label for="exampleInputEmail1">@ViewData["InputLabel"]</label>
+            <input type="text" class="form-control" name="FirstName" id="FirstName" aria-describedby="NameHelp">
+            <small id="NameHelp" class="form-text text-muted">@ViewData["Message"]</small>
+        </div>
+    </form>-->
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div> 

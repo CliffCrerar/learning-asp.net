@@ -18,6 +18,7 @@
 		* Migrations
 	
 ### Tutorial Matter: 
+* [Introduction to .NET Core Razor Pages by Tim Corey](https://www.youtube.com/watch?v=68towqYcQlY)
 * [Create a Razor Pages web app with ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/model?view=aspnetcore-3.1&tabs=visual-studio-mac)
 * [Create a web API with ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio)	
 * [MVC Music Store](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/mvc-music-store/)
