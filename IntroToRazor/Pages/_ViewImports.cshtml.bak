@@ -1,0 +1,8 @@
+@using IntroToRazor
+@using IntroToRazor.Models.Page
+@namespace IntroToRazor.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+
+}
+

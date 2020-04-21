@@ -6,7 +6,7 @@
 		* Page Models
 		* Scaffolding - Pages and Database
 		* Working with EF Core
-		* Seeding daa
+		* Seeding data
 		* Data Anotations
 		* Route and Route templates
 		* Running ASP.NET In watch mode (Every time I updated a file triggers automatic rebuild)
@@ -18,6 +18,7 @@
 		* Migrations
 	
 ### Tutorial Matter: 
+* [ASP.net 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oW8nviYduHq7bmKode-p8Wy)
 * [Introduction to .NET Core Razor Pages by Tim Corey](https://www.youtube.com/watch?v=68towqYcQlY)
 * [Create a Razor Pages web app with ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/model?view=aspnetcore-3.1&tabs=visual-studio-mac)
 * [Create a web API with ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio)	
