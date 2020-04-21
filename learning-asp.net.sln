@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "contosoCrafts.WebSite", "co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesUITimCorey", "RazorPagesUITimCorey\RazorPagesUITimCorey.csproj", "{0C1C4A70-4D58-4280-A9F0-AA8BBCAC0695}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet_az_func_api", "dotnet_az_func_api\dotnet_az_func_api.csproj", "{1AE3AFDB-BCE2-4F8D-926B-1BF352B2CD39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +27,9 @@ Global
 		{0C1C4A70-4D58-4280-A9F0-AA8BBCAC0695}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C1C4A70-4D58-4280-A9F0-AA8BBCAC0695}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C1C4A70-4D58-4280-A9F0-AA8BBCAC0695}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AE3AFDB-BCE2-4F8D-926B-1BF352B2CD39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AE3AFDB-BCE2-4F8D-926B-1BF352B2CD39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AE3AFDB-BCE2-4F8D-926B-1BF352B2CD39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AE3AFDB-BCE2-4F8D-926B-1BF352B2CD39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
