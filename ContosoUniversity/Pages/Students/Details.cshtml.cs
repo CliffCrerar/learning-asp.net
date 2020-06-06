@@ -19,7 +19,7 @@ namespace ContosoUniversity.Pages.Students
             _context = context;
         }
 
-        public Student Student { get; set; }
+        public Student Students { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,9 +28,9 @@ namespace ContosoUniversity.Pages.Students
                 return NotFound();
             }
 
-            Student = await _context.Student.FirstOrDefaultAsync(m => m.ID == id);
+            Students = await _context.Students.FirstOrDefaultAsync(m => m.ID == id);
 
-            if (Student == null)
+            if (Students == null)
             {
                 return NotFound();
             }
