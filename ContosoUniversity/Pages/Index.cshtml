@@ -2,11 +2,12 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    
 }
 
 <div class="text-center">
-    <h1 class="display-4">Contoso University</h1>
-    <p>A ASP.NET, Ef Core with SQL Server example</p>
+    <h1 class="display-4">@ViewData["PageHeading"]</h1>
+    <p>@ViewData["PageSubtitle"]</p>
 </div>
 
 

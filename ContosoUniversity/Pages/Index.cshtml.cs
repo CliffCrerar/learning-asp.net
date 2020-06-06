@@ -10,6 +10,12 @@ namespace ContosoUniversity.Pages
 {
     public class IndexModel : PageModel
     {
+        [ViewData]
+        public string PageHeading { get; } = "Tos Rond Universiteit";
+
+        [ViewData]
+        public string PageSubtitle { get; } = "ASP.NET Core and Entity Framework Core with SQL Server Demo Application";
+
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)

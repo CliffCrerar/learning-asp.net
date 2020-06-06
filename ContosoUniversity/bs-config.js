@@ -14,13 +14,13 @@
  */
 module.exports = {
     "ui": {
-        "port": 3001
+        "port": 5001
     },
     "files": false,
     "watchEvents": [
         "change"
     ],
-    "watch": false,
+    "watch": true,
     "ignore": [],
     "single": false,
     "watchOptions": {
@@ -28,7 +28,7 @@ module.exports = {
     },
     "server": false,
     "proxy": false,
-    "port": 3000,
+    "port": 5001,
     "middleware": false,
     "serveStatic": [],
     "ghostMode": {
