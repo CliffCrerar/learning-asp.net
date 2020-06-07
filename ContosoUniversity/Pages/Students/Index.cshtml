@@ -2,7 +2,6 @@
 @model IndexModel
 @{
     ViewData["Title"] = Model.Title;
-    
 }
 
 <div class="d-flex flex-row flex-wrap justify-content-between align-items-center mb-1">
@@ -35,20 +34,11 @@
 
         <tr>
             <th>
-                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort">
+                <a asp-page="./Index"
+                   asp-route-sortOrder="@Model.NameSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
                     @Html.DisplayNameFor(model => model.Students[0].LastName)
-                    @if (Model.NameSortArrow == "asc")
-                    {
-                        <i class="fas fa-arrow-up"></i>
-                    }
-                    else if (Model.NameSortArrow == "des")
-                    {
-                        <i class="fas fa-arrow-down"></i>
-                    }
-                    else
-                    {
-                        <i></i>
-                    }
+                    @Html.Raw(Model.SortArrowDisplay(Model.NameSortArrow))
                 </a>
 
             </th>
@@ -57,21 +47,11 @@
 
             <th>
 
-                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort">
+                <a asp-page="./Index"
+                   asp-route-sortOrder="@Model.DateSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
                     @Html.DisplayNameFor(model => model.Students[0].EnrollmentDate)
-                    @if (Model.DateSortArrow == "asc")
-                    {
-                        <i class="fas fa-arrow-up"></i>
-                    }
-                    else if (Model.DateSortArrow == "des")
-                    {
-                        <i class="fas fa-arrow-down"></i>
-                    }
-                    else
-                    {
-                        <i></i>
-                    }
-
+                    @Html.Raw(Model.SortArrowDisplay(Model.DateSortArrow))
                 </a>
             </th>
             <th></th>
@@ -102,3 +82,23 @@
         }
     </tbody>
 </table>
+
+@{
+    var prevDisabled = !Model.Students.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Students.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Students.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Students.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>
