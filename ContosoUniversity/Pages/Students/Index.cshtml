@@ -1,19 +1,79 @@
 @page
 @model IndexModel
-@{ViewData["Title"] = Model.Title;}
+@{
+    ViewData["Title"] = Model.Title;
+    
+}
 
 <div class="d-flex flex-row flex-wrap justify-content-between align-items-center mb-1">
-    <h4>Students</h4>
+
+    <div>
+        <h4>Students</h4>
+
+        <form asp-page="./Index" method="get">
+
+            <div class="form-actions no-color d-flex">
+
+                <div class="input-group">
+                    <input type="text" name="SearchString" placeholder="Search Names" value="@Model.CurrentFilter" />
+                    <div class="input-group-append">
+                        <input type="submit" value="Search" class="btn btn-primary" />
+                    </div>
+                </div>
+                <a asp-page="./Index" class="ml-2 btn btn-secondary">Clear</a>
+
+            </div>
+        </form>
+    </div>
+
     <a class="btn btn-success" asp-page="Create">Create New</a>
+
 </div>
 
 <table class="table">
     <thead>
 
         <tr>
-            <th>@Html.DisplayNameFor(model => model.Students[0].LastName)</th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort">
+                    @Html.DisplayNameFor(model => model.Students[0].LastName)
+                    @if (Model.NameSortArrow == "asc")
+                    {
+                        <i class="fas fa-arrow-up"></i>
+                    }
+                    else if (Model.NameSortArrow == "des")
+                    {
+                        <i class="fas fa-arrow-down"></i>
+                    }
+                    else
+                    {
+                        <i></i>
+                    }
+                </a>
+
+            </th>
+
             <th>@Html.DisplayNameFor(model => model.Students[0].FirstMidName)</th>
-            <th>@Html.DisplayNameFor(model => model.Students[0].EnrollmentDate)</th>
+
+            <th>
+
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort">
+                    @Html.DisplayNameFor(model => model.Students[0].EnrollmentDate)
+                    @if (Model.DateSortArrow == "asc")
+                    {
+                        <i class="fas fa-arrow-up"></i>
+                    }
+                    else if (Model.DateSortArrow == "des")
+                    {
+                        <i class="fas fa-arrow-down"></i>
+                    }
+                    else
+                    {
+                        <i></i>
+                    }
+
+                </a>
+            </th>
             <th></th>
         </tr>
 

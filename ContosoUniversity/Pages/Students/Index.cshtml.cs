@@ -21,11 +21,57 @@ namespace ContosoUniversity.Pages.Students
             _context = context;
         }
 
-        public IList<Student> Students { get;set; }
+        public string DateSortArrow { get; set; }
+        public string NameSortArrow { get; set; }
 
-        public async Task OnGetAsync()
+        public string NameSort { get; set; }
+        public string DateSort { get; set; }
+        public string CurrentFilter { get; set; }
+        public string CurrentSort { get; set; }
+        // public PaginatedList<Student> Students { get; set; }
+
+        public IList<Student> Students { get; set; }
+
+        public async Task OnGetAsync(string sortOrder, string searchString)
         {
-            Students = await _context.Students.ToListAsync();
+            NameSortArrow = "unsorted";
+
+            DateSortArrow = "unsorted";
+
+            NameSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+
+            DateSort = sortOrder == "Date" ? "date_desc" : "Date";
+
+            CurrentFilter = searchString;
+
+            IQueryable<Student> studentsIQ = from s in _context.Students select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                studentsIQ = studentsIQ.Where(s => s.LastName.Contains(searchString) || s.FirstMidName.Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    studentsIQ = studentsIQ.OrderByDescending(s => s.LastName);
+                    NameSortArrow = "des";
+                    break;
+                case "Date":
+                    studentsIQ = studentsIQ.OrderBy(s => s.EnrollmentDate);
+                    DateSortArrow = "asc";
+                    break;
+                case "date_desc":
+                    studentsIQ = studentsIQ.OrderByDescending(s => s.EnrollmentDate);
+                    DateSortArrow = "des";
+                    break;
+                default:
+                    studentsIQ = studentsIQ.OrderBy(s => s.LastName);
+                    NameSortArrow = "asc";
+                    break;
+            }
+
+            Students = await studentsIQ.AsNoTracking().ToListAsync();
         }
     }
 }

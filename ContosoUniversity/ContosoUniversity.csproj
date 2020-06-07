@@ -8,6 +8,7 @@
   <Folder Include="Models\" />
   <Folder Include="Pages\Students\" />
   <Folder Include="Models\View\" />
+  <Folder Include="Handlers\" />
 </ItemGroup>
 <ItemGroup>
   <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
