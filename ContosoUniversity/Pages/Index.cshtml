@@ -1,8 +1,9 @@
 ﻿@page
 @model IndexModel
+@using ContosoUniversity.Models.View
 @{
     ViewData["Title"] = "Home page";
-    
+    List<Link> links = new NavLinks().Links;
 }
 
 <div class="text-center">
@@ -10,41 +11,79 @@
     <p>@ViewData["PageSubtitle"]</p>
 </div>
 
+<hr />
+
+<div class="text-center">
+    <h2>Contoso University</h2>
+</div>
+
+<div class="d-flex flex-row flex-wrap justify-content-center text-center mb-3">
+    @{
+        foreach (Link link in links)
+        {
+            <a class="btn btn-light mx-2" asp-page="@link.LinkHref">@link.LinkTitle</a>
+        }
+    }
+</div>
+
+
 
 <div class="row mb-auto">
-    <div class="col-md-4">
-        <div class="row no-gutters border mb-4">
-            <div class="col p-4 mb-4 ">
+
+    <div class="col-md-2"></div>
+
+    <div class="col-md-8">
+        <div class="row no-gutters border mb-4 card box-shadow">
+            <div class="col p-4 mb-4">
                 <p class="card-text">
-                    Contoso University is a sample application that
-                    demonstrates how to use Entity Framework Core in an
-                    ASP.NET Core Razor Pages web app.
+                    @ViewData["ProjectDesc"]
                 </p>
             </div>
         </div>
     </div>
+
+    <div class="col-md-2"></div>
+
+    <div class="col-md-2"></div>
+
     <div class="col-md-4">
-        <div class="row no-gutters border mb-4">
+        <div class="row no-gutters border mb-4 card box-shadow">
             <div class="col p-4 d-flex flex-column position-static">
                 <p class="card-text mb-auto">
-                    You can build the application by following the steps in a series of tutorials.
+                    @ViewData["ProjectTutorial"]
                 </p>
                 <p>
-                    <a href="https://docs.microsoft.com/aspnet/core/data/ef-rp/intro" class="stretched-link">See the tutorial</a>
+                    <a href="@ViewData["ProjectTutorialLink"]"
+                       class="stretched-link">
+                        @ViewData["ProjectTutorialLinkCaption"]
+                    </a>
                 </p>
             </div>
         </div>
     </div>
+
     <div class="col-md-4">
-        <div class="row no-gutters border mb-4">
+        <div class="row no-gutters border mb-4 card box-shadow">
             <div class="col p-4 d-flex flex-column">
                 <p class="card-text mb-auto">
-                    You can download the completed project from GitHub.
+                    @ViewData["CompletedProject"]
                 </p>
                 <p>
-                    <a href="https://github.com/dotnet/AspNetCore.Docs/tree/master/aspnetcore/data/ef-rp/intro/samples" class="stretched-link">See project source code</a>
+                    <a href="@ViewData["CompletedProjectLink"]" class="stretched-link">@ViewData["CompletedProjectLinkCaption"]</a>
                 </p>
             </div>
         </div>
     </div>
+
+    <div class="col-md-2"></div>
+
+
+
+
+
+
 </div>
+
+<hr />
+
+<div class="text-center"><small>By</small> Cliff Crerar</div>

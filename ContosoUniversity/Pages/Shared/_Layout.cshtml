@@ -10,13 +10,13 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-custom navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+
             <div class="container">
 
                 <a class="navbar-brand flex-start" asp-area="" asp-page="/Index">Contoso University</a>
 
-                <button
-                        class="navbar-toggler"
+                <button class="navbar-toggler"
                         type="button"
                         data-toggle="collapse"
                         data-target="#items"
@@ -27,17 +27,8 @@
                 </button>
 
                 <div class="navbar-collapse collapse d-sm-inline-flex">
-                    <style>
-                        .nav-link{
-                            border-bottom: 2px solid transparent;
-                        }
-                        .active{
-                            border-bottom: 2px solid black
-                        }
-                    </style>
 
                     <ul id="items" class="navbar-nav flex-grow-1 justify-content-end">
-
                         @{
                             var Links = new NavLinks().Links;
                             foreach (var link in Links)
@@ -51,6 +42,7 @@
                             }
                         }
                     </ul>
+
                 </div>
             </div>
         </nav>
@@ -70,18 +62,16 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script>
-        $(window).on('load', onWindowLoadActivateTab)
+    <script>$(window).on('load', onWindowLoadActivateTab)
 
         function onWindowLoadActivateTab() {
-            console.log('load',location.pathname.split('/')[1])
-            const setTab = (anchorId) => $('#'+anchorId).addClass('active');
-            return location.pathname === '/' 
+            console.log('load', location.pathname.split('/')[1])
+            const setTab = (anchorId) => $('#' + anchorId).addClass('active');
+            return location.pathname === '/'
                 ? setTab('tab-Home')
-                : setTab('tab-'+location.pathname.split('/')[1]);
-        }
-    </script>
+                : setTab('tab-' + location.pathname.split('/')[1]);
+        }</script>
 
-        @RenderSection("Scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

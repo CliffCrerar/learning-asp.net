@@ -12,14 +12,13 @@ namespace ContosoUniversity.Pages.Students
 {
     public class CreateModel : PageModel
     {
-        public string Title = "Create Students";
+        public string Title = "New Students";
 
         private readonly ContosoUniversity.Data.SchoolContext _context;
 
         public CreateModel(ContosoUniversity.Data.SchoolContext context)
         {
             _context = context;
-            
         }
 
         public IActionResult OnGet()
@@ -34,15 +33,20 @@ namespace ContosoUniversity.Pages.Students
         // more details see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
+            Student newStudent = new Student();
+            if (await TryUpdateModelAsync<Student>(
+                newStudent,
+                "student",
+                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate
+                )
+            )
             {
-                return Page();
+                _context.Students.Add(Student);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
             }
+            return Page();
 
-            _context.Students.Add(Student);
-            await _context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
         }
     }
 }
