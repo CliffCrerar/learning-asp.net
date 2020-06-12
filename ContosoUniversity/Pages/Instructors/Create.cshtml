@@ -2,17 +2,9 @@
 @model ContosoUniversity.Pages.Instructors.CreateModel
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Create Instructors";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
 
 <h4>Instructor</h4>
 <hr />
@@ -49,5 +41,3 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
-</body>
-</html>
