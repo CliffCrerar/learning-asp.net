@@ -1,0 +1,6 @@
+[submodule "My-Super-Bank"]
+	path = My-Super-Bank
+	url = ./My-Super-Bank
+[submodule "contosoCrafts"]
+	path = contosoCrafts
+	url = ./contosoCrafts
