@@ -38,11 +38,9 @@ namespace ContosoUniversity.Pages
             _logger = logger;
         }
 
-        public string Message { get; set; }
-
         public void OnGet()
         {
-            _logger.LogInformation(Message);
+
         }
     }
 }
